@@ -1,3 +1,5 @@
+// We can use either iterative method or recursive method to solve the depth first traversal
+
 const depthFirstPrint_iterative = (graphMap, source) => {
     const stack = [source]; // use this array as a stack, and use push and pop to manipulate the array
 
@@ -29,5 +31,5 @@ const graph = {
     f: []
 };
 
-depthFirstPrint_iterative(graph, 'a') // Anicipated result: abdfce; Real result: acebdf
+// depthFirstPrint_iterative(graph, 'a') // Anicipated result: abdfce; Real result: acebdf
 depthFirstPrint_recursive(graph, 'a') // Anicipated result: abdfce; Real result: abdfce
