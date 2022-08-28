@@ -1,7 +1,7 @@
-// We can use either iterative method or recursive method to solve the depth first traversal
+// We can use either iterative method or recursive method to imply the depth first traversal
 
 const depthFirstPrint_iterative = (graphMap, source) => {
-    const stack = [source]; // use this array as a stack, and use push and pop to manipulate the array
+    const stack = [source]; // use this array as a stack, and use PUSH and POP to manipulate the array
 
     // we will continue the while loop as long as the stack is NOT empty
     while (stack.length > 0) {
@@ -17,8 +17,8 @@ const depthFirstPrint_iterative = (graphMap, source) => {
 // In the recursive method, we do not need extra space to exactly store the stack
 const depthFirstPrint_recursive = (graphMap, source) => {
     console.log(source);
-    for (let neightbor of graphMap[source]){
-        depthFirstPrint_recursive(graphMap,neightbor)
+    for (let neightbor of graphMap[source]) {
+        depthFirstPrint_recursive(graphMap, neightbor)
     }
 }
 
@@ -32,4 +32,4 @@ const graph = {
 };
 
 // depthFirstPrint_iterative(graph, 'a') // Anicipated result: abdfce; Real result: acebdf
-depthFirstPrint_recursive(graph, 'a') // Anicipated result: abdfce; Real result: abdfce
+depthFirstPrint_recursive(graph0, 'a') // Anicipated result: abdfce; Real result: abdfce
