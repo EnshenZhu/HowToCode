@@ -43,7 +43,7 @@ const hasPath_dft_recursive = (graphMap, src, dst) => {
         };
     }
 
-    //if we finish visiting all the nodes and still cannot match with the destinaition,
+    // if we finish visiting all the nodes and still cannot match with the destinaition,
     // there would be no path from the source to the destination, so we return false
     return false
 }
