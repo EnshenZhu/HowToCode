@@ -68,12 +68,14 @@ class CircularQueue {
     }
 };
 
-const cq=new CircularQueue(5);
+const cq = new CircularQueue(5);
 
 cq.enqueue(10)
 cq.enqueue(20)
 cq.enqueue(30)
 cq.enqueue(40)
+cq.enqueue(50)
+cq.enqueue(60)
 
 // cq.dequeue()
 // cq.dequeue()
@@ -83,3 +85,5 @@ cq.enqueue(40)
 console.log(cq.size)
 console.log(cq.isEmpty)
 console.log(cq.isFull)
+
+cq.print();
