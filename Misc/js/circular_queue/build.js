@@ -3,8 +3,8 @@
 class CircularQueue {
     #list;  // recall that a field started with # is a private field
     #capacity;
-    #head = -1;
-    #tail = -1;
+    #head = -1; // head is a pointer tracking the first element of the queue
+    #tail = -1; // tail is another pointer tracking the last element of the queue
     #size = 0;
 
     constructor(capacity) {
