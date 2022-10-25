@@ -23,8 +23,8 @@ const depthFirstPrint_recursive = (graphMap, source) => {
 }
 
 const graph = {
-    a: ['b', 'c'],
-    b: ['d'],
+    a: ['B', 'c'],
+    B: ['d'],
     c: ['e'],
     d: ['f'],
     e: [],
@@ -32,4 +32,4 @@ const graph = {
 };
 
 // depthFirstPrint_iterative(graph, 'a') // Anicipated result: abdfce; Real result: acebdf
-depthFirstPrint_recursive(graph0, 'a') // Anicipated result: abdfce; Real result: abdfce
+depthFirstPrint_recursive(graph, 'a') // Anicipated result: abdfce; Real result: abdfce
