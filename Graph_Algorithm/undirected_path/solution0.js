@@ -1,5 +1,7 @@
+// This case has O(1) Union and O(n) Find
+
 // Write a function, undirectedPath, that takes in an array of edges for an undirected graph and two nodes (nodeA, nodeB).
-// The function should return a boolean indicating whether or not there exists a path between nodeA and nodeB.
+// The function should return a boolean indicating whether there exists a path between nodeA and nodeB.
 
 const undirectedPath = (edgesMap, nodeA, nodeB) => {
     const graphMap = buildGraph(edgesMap)
@@ -10,7 +12,7 @@ const undirectedPath = (edgesMap, nodeA, nodeB) => {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 }
 
-const hasPath = (graphMap, src, dst, visited) => {
+const hasPath = (graphMap, src, dst, visited) => { // 'visited' is a hash set
     if (src == dst) return true;
     if (visited.has(src)) return false; // there is no reason to travel from a visited node
 
@@ -18,7 +20,7 @@ const hasPath = (graphMap, src, dst, visited) => {
 
     // if there are path from the neighbor to the destination,
     // there would be definitely paths from the source to the destination.
-    for (neighbor of graphMap[src]) {
+    for (let neighbor of graphMap[src]) {
         if (hasPath(graphMap, neighbor, dst, visited) == true) {
             return true;
         }
@@ -29,7 +31,7 @@ const hasPath = (graphMap, src, dst, visited) => {
     return false;
 }
 
-const buildGraph = (edgesMap) => {
+const buildGraph = (edgesMap) => { // also known as Union 
     const graphMap = {};
 
     // iterating through every single edges
@@ -46,7 +48,7 @@ const buildGraph = (edgesMap) => {
     }
 
     return graphMap;
-}
+};
 
 const edges0 = [
     ['i', 'j'],
@@ -73,6 +75,8 @@ const edges2 = [
 ];
 
 console.log(undirectedPath(edges0, 'j', 'm')); // -> true
+
+
 console.log(undirectedPath(edges0, 'm', 'j')); // -> true
 console.log(undirectedPath(edges0, 'l', 'j')); // -> true
 console.log(undirectedPath(edges0, 'k', 'o')); // -> false
