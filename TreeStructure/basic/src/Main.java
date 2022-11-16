@@ -45,10 +45,13 @@ public class Main {
         node4.left = node7;
         node4.right = node8;
 
-        System.out.println("Sum of all values of this tree is (should print 20):");
+        System.out.println("Sum of all values of this tree is (should print 35):");
         System.out.println(find_sum(node2));
 
         System.out.println("Sum of all values of this tree (start from node 3) is (should print 14):");
         System.out.println(find_sum(node3));
+
+        System.out.println("Sum of all values of this tree (start from node 4) is (should print 19):");
+        System.out.println(find_sum(node4));
     }
 }
