@@ -2,18 +2,42 @@
 title: "R Notebook"
 output: html_document
 ---
+
+# HDBSCAN with the dbscan package
+
 ```{r}
 # install.packages("dbscan")
 ```
 ```{r}
 library("dbscan")
 ```
+
+To run the HDBSCAN algorithm, simply pass the dataset and the (single) parameter value ‘minPts’ to the hdbscan function.
+
 ```{r}
 data("moons")
 plot(moons, pch = 20) # pch=20 is bullet (smaller circle)
 ```
 To run the HDBSCAN algorithm, simply pass the dataset and the (single) parameter value ‘minPts’ to the hdbscan function.
 ```{r}
-cl <- hdbscan(moons, minPts = 3)
+cl <- hdbscan(moons, minPts = 5)
 cl
+```
+
+The ‘flat’ results are stored in the ‘cluster’ member. Noise points are given a value of 0, so increment by 1.
+
+```{r}
+plot(moons, col = cl$cluster + 1, pch = 20)
+```
+The results match intuitive notions of what ‘similar’ clusters may look like when they manifest in arbitrary shapes.
+
+## Hierarchical DBSCAN
+The resulting HDBSCAN object contains a hierarchical representation of every possible DBSCAN* clustering. This hierarchical representation is compactly stored in the familiar ‘hc’ member of the resulting HDBSCAN object, in the same format of traditional hierarchical clustering objects formed using the ‘hclust’ method from the stats package.
+
+```{r}
+cl$hc
+```
+Note that although this object is available for use with any of the methods that work with ‘hclust’ objects, the distance method HDBSCAN uses (mutual reachability distance) is not an available method of the hclust function. This hierarchy, denoted the “HDBSCAN* hierarchy”, can be visualized using the built-in plotting method from the stats package
+```{r}
+plot(cl$hc, main = "HDBSCAN* Hierarchy")
 ```
