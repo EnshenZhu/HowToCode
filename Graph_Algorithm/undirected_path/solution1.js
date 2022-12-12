@@ -2,24 +2,24 @@
 
 // We will try to map the node (as the key), which belongs to the same group, into a same value
 
-const findAllNode = (edgeMap) => { // this function is useless
+// const findAllNode = (edgeMap) => { // this function is useless
 
-    const allNodes = new Set(); // create an empty set to record all nodes
+//     const allNodes = new Set(); // create an empty set to record all nodes
 
-    for (let neighbour of edgeMap) {
+//     for (let neighbour of edgeMap) {
 
-        if (!(neighbour[0] in allNodes)) {
-            allNodes.add(element)
-        }
+//         if (!(neighbour[0] in allNodes)) {
+//             allNodes.add(element)
+//         }
 
-        if (!(neighbour[1] in allNodes)) {
-            allNodes.add(element)
-        }
+//         if (!(neighbour[1] in allNodes)) {
+//             allNodes.add(element)
+//         }
 
-    }
+//     }
 
-    return Array.from(allNodes)
-}
+//     return Array.from(allNodes)
+// }
 
 const undirectedPath = (edgeMap, src, dst) => {
     const graphMap = findgNodeGroup(edgeMap)
