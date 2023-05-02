@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9d81c20-a8d0-4619-89c5-24b4eb4f7acd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/AudioTrim.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/input_folder/Backstreet_Boys_I_Want_It_That_Way.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/input_folder/Charli_XCX_Boom_Clap.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/input_folder/M2M_The_Day_You_Went_Away.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../AudioTrim/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safeEqual.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../UnionFind/test0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../UnionFind/test1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Graph_Algorithm/undirected_path/solution1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Graph_Algorithm/undirected_path/solution1.js" afterDir="false" />
-    </list>
+    <list default="true" id="f9d81c20-a8d0-4619-89c5-24b4eb4f7acd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +43,7 @@
       <updated>1670204859681</updated>
       <workItem from="1670204860411" duration="1658000" />
       <workItem from="1670338537409" duration="924000" />
+      <workItem from="1671047949520" duration="534000" />
     </task>
     <servers />
   </component>
