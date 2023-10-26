@@ -26,11 +26,16 @@ cv.imshow("Binary", binary_img[1])
 # print(binary[1])
 
 # Conduct dilation
-dilation_kernel = np.array([[0, 1, 0],
-                            [1, 1, 1],
-                            [0, 1, 0]])
+dilation_kernel = np.array(object=[[0, 1, 0],
+                                   [1, 1, 1],
+                                   [0, 1, 0]],
+                           dtype=np.uint8)
+
 dilation_binary = cv.filter2D(binary_img[1], -1, dilation_kernel)
 cv.imshow("Dilation_binary", dilation_binary)
+
+dilation_binary2 = cv.dilate(binary_img[1], dilation_kernel, iterations=1)
+cv.imshow("Dilation_binary2", dilation_binary2)
 
 # delay the closing of windows till any key is pressed
 cv.waitKey(0)
