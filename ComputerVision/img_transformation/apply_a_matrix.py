@@ -42,5 +42,5 @@ cv.imshow("Edge2", img_filter)
 img_filter = cv.filter2D(img, -1, gaussian_kernel_1)
 cv.imshow("Edge3", img_filter)
 
-# keep image showing
+# delay the closing of windows till any key is pressed
 cv.waitKey(0)

@@ -3,7 +3,7 @@ import cv2 as cv
 import numpy as np
 
 # read and show the image
-img = cv.imread("../img_src/counter_strike.jpg")
+img = cv.imread("../img_src/techies.jpg")
 cv.imshow("Techies", img)
 
 # grayscale the img
@@ -20,8 +20,17 @@ edge_img = cv.filter2D(gray, -1, edge_kernel)
 cv.imshow("Edge", edge_img)
 
 # binarize the image
-binary = cv.threshold(edge_img, thresh=150, maxval=255, type=cv.THRESH_BINARY)
-cv.imshow("Binary", edge_img)
+binary_img = cv.threshold(edge_img, thresh=150, maxval=255, type=cv.THRESH_BINARY)
+cv.imshow("Binary", binary_img[1])
 
-# keep image showing
+# print(binary[1])
+
+# Conduct dilation
+dilation_kernel = np.array([[0, 1, 0],
+                            [1, 1, 1],
+                            [0, 1, 0]])
+dilation_binary = cv.filter2D(binary_img[1], -1, dilation_kernel)
+cv.imshow("Dilation_binary", dilation_binary)
+
+# delay the closing of windows till any key is pressed
 cv.waitKey(0)
