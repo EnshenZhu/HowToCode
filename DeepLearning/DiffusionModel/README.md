@@ -31,5 +31,5 @@ Three types of network:
 
 #### Important Papers
 
-1. **Demonising Diffusion Probabilistic Models**
-2. **Diffusion Models Beat GANs on Image Synthesis**
+1. ***Demonising Diffusion Probabilistic Models***
+2. ***Diffusion Models Beat GANs on Image Synthesis***
