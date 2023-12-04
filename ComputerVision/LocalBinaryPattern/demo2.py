@@ -16,6 +16,8 @@ radius = 3
 n_points = 8 * radius
 lbp = local_binary_pattern(image, n_points, radius, method='uniform')
 
+print(lbp.shape)
+
 # Display the original image and the LBP image
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4))
 
