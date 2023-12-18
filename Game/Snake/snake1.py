@@ -15,6 +15,7 @@ WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
+
 # Snake class
 class Snake:
     def __init__(self):
@@ -29,7 +30,7 @@ class Snake:
     def update(self):
         cur = self.get_head_position()
         x, y = self.direction
-        new = (((cur[0] + (x*GRID_SIZE)) % WIDTH), (cur[1] + (y*GRID_SIZE)) % HEIGHT)
+        new = (((cur[0] + (x * GRID_SIZE)) % WIDTH), (cur[1] + (y * GRID_SIZE)) % HEIGHT)
         if len(self.positions) > 2 and new in self.positions[2:]:
             self.reset()
         else:
@@ -55,8 +56,8 @@ class Fruit:
         self.randomize_position()
 
     def randomize_position(self):
-        self.position = (random.randint(0, (WIDTH//GRID_SIZE)-1) * GRID_SIZE,
-                         random.randint(0, (HEIGHT//GRID_SIZE)-1) * GRID_SIZE)
+        self.position = (random.randint(0, (WIDTH // GRID_SIZE) - 1) * GRID_SIZE,
+                         random.randint(0, (HEIGHT // GRID_SIZE) - 1) * GRID_SIZE)
 
     def render(self, surface):
         pygame.draw.rect(surface, self.color, (self.position[0], self.position[1], GRID_SIZE, GRID_SIZE))
@@ -67,6 +68,7 @@ UP = (0, -1)
 DOWN = (0, 1)
 LEFT = (-1, 0)
 RIGHT = (1, 0)
+
 
 # Main function
 def main():
@@ -109,6 +111,7 @@ def main():
         screen.blit(surface, (0, 0))
         pygame.display.update()
         clock.tick(FPS)
+
 
 if __name__ == "__main__":
     main()
